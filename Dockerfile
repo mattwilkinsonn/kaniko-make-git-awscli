@@ -6,8 +6,7 @@ FROM alpine:latest
 ENV GLIBC_VER=2.31-r0
 
 # install glibc compatibility for alpine from https://stackoverflow.com/questions/60298619/awscli-version-2-on-alpine-linux
-RUN apk del libc6-compat \
-    && apk --no-cache add \
+RUN apk --no-cache add \
     binutils \
     curl \
     && curl -sL https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub -o /etc/apk/keys/sgerrand.rsa.pub \
